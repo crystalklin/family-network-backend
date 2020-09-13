@@ -55,6 +55,8 @@ Table: appointments
     appointment_id                      PRIMARY KEY
     appointment_type_id
 
+    appointment_name
+
     establishment_id                    KEY
     doctor_id                           KEY
 
@@ -81,3 +83,6 @@ Table: prescriptions
     prescription_fill_date
     prescription_expire_date
     prescription_empty
+
+    prescriptions_expected_effects //api
+    prescriotions_notes
