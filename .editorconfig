@@ -1,0 +1,18 @@
+# EditorConfig file
+# Helps to maintain consistent coding styles across editors
+
+#top-most editorconfig file
+root = true
+
+#unix style newlines
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = false
+
+#default charset
+charset = utf-8
+
+#matches indent style
+indent_style = space
+indent_size = 4
