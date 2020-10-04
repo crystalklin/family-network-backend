@@ -1,12 +1,12 @@
 language: node_js
 env:
   global:
-    - CC_TEST_REPORTER_ID=1aae41013e08c850628a36e6630b6bdeac443e4996823decb2832210eee44728
+    - CC_TEST_REPORTER_ID=cf557a8199535f94c67e49b1cc557f443e939d58db7a560f9aa7a86eb82ce02d
 matrix:
   include:
   - node_js: '12'
-cache:
-  directories: [node_modules]
+#cache:
+#  directories: [node_modules]
 install:
   yarn
 after_success: yarn coverage
