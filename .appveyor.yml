@@ -1,8 +1,13 @@
 environment:
   matrix:
-  - nodejs_version: '12'
+  - nodejs_version: "12"
+#cache:
+#  - node_modules
 install:
-  - yarn
+#  - yarn
+  - npm install
 test_script:
-  - yarn test
+#  - yarn test
+  - node --version
+  - npm --version
 build: off
