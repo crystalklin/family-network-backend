@@ -1,16 +1,16 @@
 {
   "name": "family-network",
-  "version": "0.0.0",
+  "version": "14.9.0",
   "private": true,
   "scripts": {
     "prestart": "babel ./src --out-dir build",
     "start": "node ./build/bin/www.js",
     "startdev": "nodemon --exec babel-node ./src/bin/www.js",
-    "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha -r @babel/register",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "./node_modules/.bin/eslint ./src",
     "pretty": "prettier --write '**/*.{js,json}' '!node_modules/**'",
-    "postpretty": "yarn lint --fix"
+    "postpretty": "yarn lint --fix",
+    "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha -r @babel/register",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "chai": "^4.2.0",
