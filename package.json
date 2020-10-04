@@ -1,6 +1,6 @@
 {
   "name": "family-network",
-  "version": "14.9.0",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "prestart": "babel ./src --out-dir build",
@@ -11,6 +11,10 @@
     "postpretty": "yarn lint --fix",
     "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha -r @babel/register",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "engines": {
+    "node": ">=10.12.0",
+    "npm": ">=6.14.0"
   },
   "dependencies": {
     "chai": "^4.2.0",
