@@ -3,9 +3,9 @@ environment:
 #cache:
 #  - node_modules
 install:
-  - yarn
+#  - yarn
 test_script:
   - node --version
   - npm --version
-  - yarn test
+#  - yarn test
 build: off
