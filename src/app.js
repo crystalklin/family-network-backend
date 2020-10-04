@@ -1,13 +1,14 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+import createError from 'http-errors';
+import express from 'express';
+import path from 'path';
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
 
-var app = express();
+import indexRouter from './routes/index';
+import usersRouter from './routes/users';
+
+const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -17,6 +18,7 @@ app.use(cookieParser());
 app.use('/v1', indexRouter);
 app.use('/users', usersRouter);
 
+/* ES5
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -31,6 +33,6 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
-});
+}); */
 
-module.exports = app;
+export default app;
